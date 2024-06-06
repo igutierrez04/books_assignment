@@ -30,7 +30,7 @@
                     <h1>All Authors</h1>
                     <div class="border border-secondary border-1 row">
                         {% for author in authors %}
-                            <a href="/show/author/" class="fs-5 my-2 ">{{ author.name }}</a>
+                            <a href="/show/author/{{ author.id }}" class="fs-5 my-2 ">{{ author.name }}</a>
                         {% endfor %}
                     </div>
                     <!-- Add a new book link -->

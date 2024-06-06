@@ -27,3 +27,9 @@ class Author:
         for author in results:
             authors.append(cls(author))
         return authors
+    
+    @classmethod
+    def get_one_author(cls, data):
+        query = "SELECT * FROM authors WHERE authors.id = %(id)s;"
+        results = connectToMySQL(cls.DB).query_db(query, data)
+        return cls(results[0])
