@@ -13,7 +13,10 @@ def authors():
 
 @app.route('/create/author', methods=['POST'])
 def create_author():
-    Author.create_author(request.form)
+    data = {
+        "name": request.form['name']
+    }
+    author_id = Author.create_author(data)
     return redirect('/authors')
 
 @app.route('/show/author/<int:id>')

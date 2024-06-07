@@ -32,7 +32,7 @@
                     <h1>All Books</h1>
                     <div class="border border-secondary border-1 row">
                         {% for book in books %}
-                            <a href="" class="fs-5 my-2 ">{{ book.title }}</a>
+                            <a href="/book/{{ book.id }}" class="fs-5 my-2 ">{{ book.title }}</a>
                         {% endfor %}
                     </div>
                     <!-- Add a new book link -->
